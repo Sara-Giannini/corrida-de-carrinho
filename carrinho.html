@@ -6,62 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrida de Carrinho</title>
+    <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        .hide{
-            display: none;
-        }
-        .car,.enemy{
-            position: absolute;
-            bottom: 100px;
-            margin: auto;
-            width: 45px;
-            height: 90px;
-            background-color: rgb(202, 41, 41);      
-            background-image: url(./car.png);
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-            box-shadow: 10px 10px 30px black;
-        }
-        .gameArea{
-            background-image: url(./road.gif);
-            width: 257px;
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            margin: auto;
-            left: 40.5%;
-        }
-        .score{
-            background-image: url(./score.jpg);
-            background-repeat: repeat-x;
-            filter: contrast(0.9);
-            border-radius: 10px;
-            height: 61px;
-            text-align: center;
-            color: rgb(255, 174, 0);
-            font-size: 2.7em;
-            font-family: 'Press Start 2P', cursive;
-            text-shadow: 10px 10px 15px rgb(0, 0, 0);
-            box-shadow: 0px 5px 20px rgb(255, 38, 0);
-        }
-        .startScreen{
-            text-align: center;
-            background-color: rgb(173, 37, 13);
-            border: 1px solid rgb(0, 0, 0);
-            border-radius: 20px;
-            font-family: 'Press Start 2P', cursive;
-            color: rgb(255, 153, 0);
-            font-size: 1.2em;
-            padding: 15px;
-            margin: auto;
-            width: 300px;
-        }   
-    </style>
    <style>
     body {
-      background-image: url('background.gif');
+      background-image: url('./img/background.gif');
       background-repeat:repeat;
       background-attachment: fixed;
     }
@@ -77,7 +26,7 @@
         const score=document.querySelector(".score");
         const startScreen=document.querySelector(".startScreen");
         const gameArea=document.querySelector(".gameArea");
-        let player={speed:25, score:0}
+        let player={ speed:20, score:0}   
         let keys={
             ArrowUp:false,
             ArrowDown:false,
@@ -119,7 +68,7 @@
                     item.style.left=Math.floor(Math.random()*200)+"px";
                 }
                 item.y+=player.speed;
-               item.style.top=item.y+"px";
+               item.style.top=item.y+"px";          
             })
         }
         function playGame() {
@@ -200,3 +149,6 @@
     </script>
 </body>
 </html>
+
+
+
