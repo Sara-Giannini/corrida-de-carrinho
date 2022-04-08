@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrida de Carrinho</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
     <style>
         .hide{
             display: none;
@@ -21,12 +18,11 @@
             width: 45px;
             height: 90px;
             background-color: rgb(202, 41, 41);      
-            
             background-image: url(./car.png);
             background-size: cover;
             background-position: center;
             border-radius: 20px;
-            box-shadow: 0px 0px 20px black;
+            box-shadow: 10px 10px 30px black;
         }
         .gameArea{
             background-image: url(./road.gif);
@@ -54,6 +50,7 @@
             text-align: center;
             background-color: rgb(173, 37, 13);
             border: 1px solid rgb(0, 0, 0);
+            border-radius: 20px;
             font-family: 'Press Start 2P', cursive;
             color: rgb(255, 153, 0);
             font-size: 1.2em;
@@ -198,7 +195,7 @@
                 let hex=Math.floor(Math.random()*255).toString(16);
                 return("0"+String(hex)).substr(-2)
             }
-            return "#"+color()+color()+color()+color();
+            return "#"+color()+color()+color();
         }
     </script>
 </body>
