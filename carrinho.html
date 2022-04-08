@@ -18,12 +18,11 @@
             width: 45px;
             height: 90px;
             background-color: rgb(202, 41, 41);      
-            
             background-image: url(./car.png);
             background-size: cover;
             background-position: center;
             border-radius: 20px;
-            box-shadow: 0px 0px 20px black;
+            box-shadow: 10px 10px 30px black;
         }
         .gameArea{
             background-image: url(./road.gif);
@@ -51,6 +50,7 @@
             text-align: center;
             background-color: rgb(173, 37, 13);
             border: 1px solid rgb(0, 0, 0);
+            border-radius: 20px;
             font-family: 'Press Start 2P', cursive;
             color: rgb(255, 153, 0);
             font-size: 1.2em;
@@ -195,7 +195,7 @@
                 let hex=Math.floor(Math.random()*255).toString(16);
                 return("0"+String(hex)).substr(-2)
             }
-            return "#"+color()+color()+color()+color();
+            return "#"+color()+color()+color();
         }
     </script>
 </body>
